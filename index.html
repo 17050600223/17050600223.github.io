@@ -152,6 +152,276 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-小程序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/08/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">小程序</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/08/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2020-05-08T10:18:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="input-标签绑定-input-事件"><a href="#input-标签绑定-input-事件" class="headerlink" title="input 标签绑定 input 事件"></a>input 标签绑定 input 事件</h2><p>1、需要给 input 标签绑定 input事件</p>
+<p>​        绑定关键字 bindinput</p>
+<p><img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200508182619949.png" alt="image-20200508182619949"></p>
+<p>2、通过事件源对象来获取   e.detail.value</p>
+<p>3、把输入框的值 赋值到 data 当中</p>
+<p>​        不能之间 </p>
+<p>​                        1） this.data.num = e.detail.value</p>
+<p>​                        2)    this.num = e.detail.value</p>
+<p>​        正确写法</p>
+<p>​                        this.setDat({</p>
+<p>​                                num:e.detail.value</p>
+<p>​                        })</p>
+<p><img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200508182712411.png" alt="image-20200508182712411"></p>
+<p>4、需要加入一个点击事件</p>
+<p>​        1）    bindtap    (不再是onclick)</p>
+<p>​        2）    无法在小程序当中的 事件中 直接传参</p>
+<p>​        3）    通过自定义属性的方式来传递参数</p>
+<p>​        4）    事件源中获取 自定义属性</p>
+<p><img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200508183713348.png" alt="image-20200508183713348"></p>
+<p><img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200508183851710.png" alt="image-20200508183851710"></p>
+<hr>
+<h2 id="样式-rpx"><a href="#样式-rpx" class="headerlink" title="样式 rpx"></a>样式 rpx</h2><p> 1、若存在一个设计稿 宽度未知  page</p>
+<p>​        1)    设计稿 page 存在一个元素宽度 100px</p>
+<p>​        2)    拿一上的需求 去实现 不同宽度的页面适配</p>
+<p>​        page px = 750rpx</p>
+<p>​        1px = 750rpx / page</p>
+<p>​        100px = 750rpx * 100 / page</p>
+<p>​        假设 page = 375px</p>
+<p>2、利用  calc 属性 （css 和 wxss）都支持</p>
+<p>​        1）750 和 rpx 中间不能留空格</p>
+<p>​        2）运算符的两边也不要留空格</p>
+<p><img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200508190004061.png" alt="image-20200508190004061"></p>
+<hr>
+<h2 id="土豆图床"><a href="#土豆图床" class="headerlink" title="土豆图床"></a>土豆图床</h2><p>​        <a href="https://images.ac.cn" target="_blank" rel="noopener">https://images.ac.cn</a></p>
+<hr>
+<h2 id="轮播图"><a href="#轮播图" class="headerlink" title="轮播图"></a>轮播图</h2><p>1、轮播图外层容器 swiper</p>
+<p>2、每一个轮播项 swiper-item</p>
+<p>3、swiper 标签存在默认样式</p>
+<p>​        1）    width 100%</p>
+<p>​        2）    height 150px    image 存在默认宽高 320*240 px</p>
+<p>​        3）    swiper 高度 无法实现由内容撑开</p>
+<p>4、先找出 原图的宽高 等比列 给swiper 定宽高</p>
+<p>​        swiper 高度 / swiper 高度 = 原图宽度 / 原图高度</p>
+<p>​        即：    swiper 高度 = swiper 宽度 * 原图宽度 / 原图高度</p>
+<p>5、autoplay    自动轮播</p>
+<p>6、interval    修改自动轮播的切换时间</p>
+<p>7、circular    衔接轮播</p>
+<p>8、indicator-dots    显示 指示器 分页器 索引器</p>
+<p>9、indicator-color    指示器未选中时的 颜色</p>
+<p>10、indicator-active-color    选中时指示器的颜色</p>
+<hr>
+<h2 id="导航组件"><a href="#导航组件" class="headerlink" title="导航组件"></a>导航组件</h2><p>1、块级元素 默认换行    可以直接加宽高</p>
+<p>2、url 要转跳的页面路径    绝对路径    相对路径</p>
+<p>​        1）    self    默认值 自己的小程序页面</p>
+<p>​        2）    miniProgram    其他的小程序页面</p>
+<p>3、open-type 转跳方式</p>
+<p>​        1）    navigate    默认值    保留当前页面转跳到应用内某个页面</p>
+<p>​        2）    redirect    关闭当前页面，转跳到应用内的某个页面    但不允许转跳到 tabBar页面</p>
+<p>​        3）    switchTab    转跳到 tabBar页面    并关闭其他所有非tabBar页面</p>
+<p>​        4）    reLaunch    关闭所有页面，打开到应用内的某个页面</p>
+<hr>
+<h2 id="富文本标签"><a href="#富文本标签" class="headerlink" title="富文本标签"></a>富文本标签</h2><p>rich-text 富文本标签</p>
+<p>​        1、nodes属性来实现</p>
+<p>​            1）    接收标签字符串</p>
+<p>​            2）    接收对象数组</p>
+<p><img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200508223043815.png" alt="image-20200508223043815"></p>
+<hr>
+<h2 id="button开发能力"><a href="#button开发能力" class="headerlink" title="button开发能力"></a>button开发能力</h2><table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">contact</td>
+<td align="left">打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从 bindcontact 回调中获得具体信息。</td>
+<td align="left">需要微信小程序的后台配置</td>
+</tr>
+<tr>
+<td align="left">share</td>
+<td align="left">触发用户转发</td>
+<td align="left">不能把小程序分享到朋友圈</td>
+</tr>
+<tr>
+<td align="left">getPhoneNumber</td>
+<td align="left">获取用户手机号</td>
+<td align="left">绑定一个事件bindgetphonenumber，在事件回调函数中通过参数来获取信息，获取到的信息 已经加密过，需要用户自己搭建小程序的后台服务器，在后台服务器中进行解析</td>
+</tr>
+<tr>
+<td align="left">getUserInfo</td>
+<td align="left">获取用户信息</td>
+<td align="left">绑定一个事件bindgetuserinfo回调中获取到用户信息，不存在加密的字段</td>
+</tr>
+<tr>
+<td align="left">launchApp</td>
+<td align="left">打开APP，可以通过app-parameter属性设定向APP传的参数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">openSetting</td>
+<td align="left">打开授权设置页</td>
+<td align="left">授权页面中 只会出现 用户曾经点击过的 权限</td>
+</tr>
+<tr>
+<td align="left">feedback</td>
+<td align="left">打开“意见反馈”页面，用户可提交反馈内容并上传<a href="https://developers.weixin.qq.com/miniprogram/dev/api/base/debug/wx.getLogManager.html" target="_blank" rel="noopener">日志</a>，开发者可以登录<a href="https://mp.weixin.qq.com/" target="_blank" rel="noopener">小程序管理后台</a>后进入左侧菜单“客服反馈”页面获取到反馈内容</td>
+<td align="left">只能够通过真机调试来打开</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="自定义组件-父向子传递数据"><a href="#自定义组件-父向子传递数据" class="headerlink" title="自定义组件-父向子传递数据"></a>自定义组件-父向子传递数据</h2><p>父组件（页面）向子组件 传递数据 通过 标签属性的方式来传递</p>
+<p>​    1）    在子组件上接收</p>
+<p>​    2）    把这个数据当成是data中的数据直接用即可</p>
+<p><img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200509002528924.png" alt="image-20200509002528924"></p>
+<hr>
+<h2 id="自定义组件-子向父传递数据"><a href="#自定义组件-子向父传递数据" class="headerlink" title="自定义组件-子向父传递数据"></a>自定义组件-子向父传递数据</h2><p>子向父传递数据 通过事件的方式传递</p>
+<p>​    1）    在子组件中标签上加入一个 自定义事件</p>
+<p>1、在子组件中调用 triggerEvent 函数</p>
+<p><img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200509003740047.png" alt="image-20200509003740047"></p>
+<p>2、<img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200509004256910.png" alt="image-20200509004256910"></p>
+<p>3、<img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200509004400544.png" alt="image-20200509004400544"></p>
+<hr>
+<h2 id="slot-插槽"><a href="#slot-插槽" class="headerlink" title="slot 插槽"></a>slot 插槽</h2><p><img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200509004502040.png" alt="image-20200509004502040"></p>
+<hr>
+<h2 id="自定义组件的其他属性"><a href="#自定义组件的其他属性" class="headerlink" title="自定义组件的其他属性"></a>自定义组件的其他属性</h2><p><img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200509004800593.png" alt="image-20200509004800593"></p>
+<hr>
+<h2 id="应用生命周期"><a href="#应用生命周期" class="headerlink" title="应用生命周期"></a>应用生命周期</h2><p><img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200509005803761.png" alt="image-20200509005803761"></p>
+<p><img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200509005838720.png" alt="image-20200509005838720"></p>
+<hr>
+<h2 id="页面生命周期"><a href="#页面生命周期" class="headerlink" title="页面生命周期"></a>页面生命周期</h2><p><img src="C:%5CUsers%5CZHAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200509010250177.png" alt="image-20200509010250177"></p>
+<p><img src="https://res.wx.qq.com/wxdoc/dist/assets/img/page-lifecycle.2e646c86.png" alt="img"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/08/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hello-world - 副本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/08/hello-world%20-%20%E5%89%AF%E6%9C%AC/">Hello World</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/08/hello-world%20-%20%E5%89%AF%E6%9C%AC/" class="archive-article-date">
+  	<time datetime="2020-05-08T10:16:21.471Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/08/hello-world%20-%20%E5%89%AF%E6%9C%AC/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
