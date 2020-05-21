@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="昭">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -43,10 +43,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="https://pics.images.ac.cn/image/5ec65bea28fee.html" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">昭</a></h1>
 		</hgroup>
 		
 
@@ -54,8 +54,6 @@
 			<ul>
 			
 				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -66,10 +64,6 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
-            
-    			
     			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
@@ -77,13 +71,11 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://gitee.com/wei_zhao_liu" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="qq" target="_blank" href="/1217188871" title="qq"><i class="icon-qq"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="mail" target="_blank" href="/1217188871@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -101,15 +93,13 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="https://pics.images.ac.cn/image/5ec65bea28fee.html" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">昭</h1>
 			</hgroup>
 			
 			
-			
-				
 			
 				
 			
@@ -118,13 +108,11 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://gitee.com/wei_zhao_liu" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="qq" target="_blank" href="/1217188871" title="qq"><i class="icon-qq"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="mail" target="_blank" href="/1217188871@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -133,9 +121,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
-		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -151,6 +137,176 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-apply和call的高级用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/14/apply%E5%92%8Ccall%E7%9A%84%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/">apply和call的高级用法</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/14/apply%E5%92%8Ccall%E7%9A%84%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-05-13T16:19:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="apply和call的高级用法"><a href="#apply和call的高级用法" class="headerlink" title="apply和call的高级用法"></a>apply和call的高级用法</h2><h3 id="1-求数组中的最小值，借用-apply方法"><a href="#1-求数组中的最小值，借用-apply方法" class="headerlink" title="1. 求数组中的最小值，借用 apply方法"></a>1. 求数组中的最小值，借用 apply方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// var min = Math.min(11,2,4,5);</span></span><br><span class="line"><span class="comment">// console.log(min);   // 2</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">11</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.min.apply(<span class="built_in">Math</span>,arr));  <span class="comment">// 2 apply将数组展开</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-求数组等具体数据类型，借用-call方法"><a href="#2-求数组等具体数据类型，借用-call方法" class="headerlink" title="2. 求数组等具体数据类型，借用 call方法"></a>2. 求数组等具体数据类型，借用 call方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// toString方法数 Object的方法，其他数据类型都对 toString方法进行了重写</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(obj)</span><br><span class="line"><span class="built_in">console</span>.log(obj.toString());  <span class="comment">// [object Object]</span></span><br><span class="line"><span class="comment">// 数组的 toString方法</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr.toString());  <span class="comment">// 1，2</span></span><br><span class="line"><span class="comment">// 直接调用父类 Object的 toString方法，改变 this为 arr数组</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(arr)); <span class="comment">// [object Array]</span></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">4</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num.toString());</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>理解：这是因为<strong>toString</strong>为<strong>Object</strong>的原型方法，而<strong>Array</strong> ，<strong>function</strong>等类型作为<strong>Object</strong>的实例，<br>都重写了<strong>toString</strong>方法。不同的对象类型调用<strong>toString</strong>方法时，根据原型链的知识，调用<br>的是对应的重写之后的<strong>toString</strong>方法（function类型返回内容为函数体的字符串，<br><code>Array</code>类型返回元素组成的字符串…..），而不会去调用Object上原型<strong>toString</strong>方法<br>（返回对象的具体类型），所以采用<code>obj.toString()</code>不能得到其对象类型，只能将obj转换为字符串类型；<br>因此，在想要得到对象的具体类型时，应该调用Object上原型<code>toString</code>方法。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.prototype.hasOwnProperty(<span class="string">"toString"</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.toString());     <span class="comment">// 1,2,3</span></span><br><span class="line"><span class="keyword">delete</span> <span class="built_in">Array</span>.prototype.toString; <span class="comment">//delete操作符可以删除实例属性</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.prototype.hasOwnProperty(<span class="string">"toString"</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="comment">// 删除后直接找到父类Object的toString方法</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.toString());  <span class="comment">// "[object Array]"</span></span><br></pre></td></tr></table></figure>
+
+<p>删除了<code>Array</code>的<code>toString</code>方法后，同样再采用<code>arr.toString()</code>方法调用时，不<br>再有屏蔽<code>Object</code>原型方法的实例方法，因此沿着原型链，<code>arr</code>最后调用了<code>Object</code><br>的<code>toString</code>方法，返回了和<code>Object.prototype.toString.call(arr)</code>相同的结果</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/14/apply%E5%92%8Ccall%E7%9A%84%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-vue快速原型开发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/09/vue%E5%BF%AB%E9%80%9F%E5%8E%9F%E5%9E%8B%E5%BC%80%E5%8F%91/">vue快速原型开发</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/09/vue%E5%BF%AB%E9%80%9F%E5%8E%9F%E5%9E%8B%E5%BC%80%E5%8F%91/" class="archive-article-date">
+  	<time datetime="2020-05-09T03:20:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="vue快速原型开发"><a href="#vue快速原型开发" class="headerlink" title="vue快速原型开发"></a>vue快速原型开发</h2><ol>
+<li>全局安装<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g @vue&#x2F;cli-service-global</span><br></pre></td></tr></table></figure></li>
+<li>运行<br>在<code>.vue</code>文件中 <code>cmd</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue serve 文件名</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/09/vue%E5%BF%AB%E9%80%9F%E5%8E%9F%E5%9E%8B%E5%BC%80%E5%8F%91/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-小程序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -347,39 +503,37 @@
 
 
   
-    <article id="post-hello-world - 副本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-promise封装wx-request" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/08/hello-world%20-%20%E5%89%AF%E6%9C%AC/">Hello World</a>
+      <a class="article-title" href="/2020/05/05/promise%E5%B0%81%E8%A3%85wx-request/">porimse封装wx.request</a>
     </h1>
   
 
         
-        <a href="/2020/05/08/hello-world%20-%20%E5%89%AF%E6%9C%AC/" class="archive-article-date">
-  	<time datetime="2020-05-08T10:16:21.471Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
+        <a href="/2020/05/05/promise%E5%B0%81%E8%A3%85wx-request/" class="archive-article-date">
+  	<time datetime="2020-05-04T16:59:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="porimse封装wx-request"><a href="#porimse封装wx-request" class="headerlink" title="porimse封装wx.request"></a>porimse封装wx.request</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> request = <span class="function">(<span class="params">&#123;url, method = <span class="string">'GET'</span>, data, header&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> headers = &#123;  <span class="comment">// 默认值</span></span><br><span class="line">    <span class="string">'content-type'</span>: <span class="string">'application/x-www-form-urlencoded'</span>,</span><br><span class="line">    <span class="string">'Cookie'</span>: wx.getStorageSync(<span class="string">'sessionId'</span>) || <span class="string">''</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">if</span>(header) &#123;  <span class="comment">// 如果有传入新的 header内容</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i <span class="keyword">in</span> header) &#123;</span><br><span class="line">      headers[i] = header[i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      url: <span class="string">'http://route.showapi.com'</span> + url,</span><br><span class="line">      data,</span><br><span class="line">      method,</span><br><span class="line">      header: headers,</span><br><span class="line">      success: <span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res);</span><br><span class="line">        <span class="keyword">if</span>(res.statusCode === <span class="number">200</span>) &#123;</span><br><span class="line">          resolve(res);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          reject(res);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      fail: <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        reject(err);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> &#123;</span><br><span class="line">  request</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>默认的请求方式：<code>GET</code>，<br><code>data</code>数据格式：<code>query string</code></p>
+<p>在微信小程序中使用，通过<code>es6</code>的<code>import .. from ..</code> 引入，然后注册到<code>app</code>全局方法中。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> utils <span class="keyword">from</span> <span class="string">'./utils/api'</span>;</span><br><span class="line">...utils,     <span class="comment">// 通过三点展开运算符把 utils文件里 api.js的方法注册到app中</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>调用接口</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 调用接口</span></span><br><span class="line">request(&#123;</span><br><span class="line">  url: <span class="string">'/109-34'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">	showapi_appid: <span class="string">'62195'</span>, <span class="comment">// 易源应用 id</span></span><br><span class="line">	showapi_sign: <span class="string">'f3b99d296a2c4728a4cfd98690d0b66d'</span>, <span class="comment">// 为了验证用户身份，以及确保参数不被中间人篡改，需要传递调用者的数字签名。</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res);</span><br><span class="line">&#125;).catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>本文转自：<a href="https://blog.zjyegt.cn/2019/05/02/proimse%E5%B0%81%E8%A3%85wx-request/#more" target="_blank" rel="noopener">https://blog.zjyegt.cn/2019/05/02/proimse%E5%B0%81%E8%A3%85wx-request/#more</a></p>
+</blockquote>
 
       
 
@@ -387,12 +541,28 @@
     </div>
     <div class="article-info article-info-index">
       
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
       
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">微信小程序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/08/hello-world%20-%20%E5%89%AF%E6%9C%AC/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/05/05/promise%E5%B0%81%E8%A3%85wx-request/">展开全文 >></a>
         </p>
       
 
@@ -422,39 +592,33 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-vue项目开启gzip压缩" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/08/hello-world/">Hello World</a>
+      <a class="article-title" href="/2020/03/10/vue%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%90%AFgzip%E5%8E%8B%E7%BC%A9/">vue项目开启gzip压缩</a>
     </h1>
   
 
         
-        <a href="/2020/05/08/hello-world/" class="archive-article-date">
-  	<time datetime="2020-05-08T08:54:24.984Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
+        <a href="/2020/03/10/vue%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%90%AFgzip%E5%8E%8B%E7%BC%A9/" class="archive-article-date">
+  	<time datetime="2020-03-10T15:00:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p><strong>1. 将<code>npm run build</code>生成的<code>dist</code>目录放到自己搭建的<code>node</code>服务器上</strong><br><strong>2. 开启<code>gzip</code>网络传输压缩，加快传输速度</strong></p>
+<h3 id="服务器端安装compression"><a href="#服务器端安装compression" class="headerlink" title="服务器端安装compression"></a>服务器端安装<code>compression</code></h3>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D compression</span><br></pre></td></tr></table></figure>
+<h3 id="app-js导入包"><a href="#app-js导入包" class="headerlink" title="app.js导入包"></a><code>app.js</code>导入包</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> compression = <span class="built_in">require</span>(<span class="string">'compression'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="注册为中间件"><a href="#注册为中间件" class="headerlink" title="注册为中间件"></a>注册为中间件</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.use(compression())</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：<br>gzip压缩中间件必须放在静态资源前面</p>
+</blockquote>
 
       
 
@@ -463,11 +627,104 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/08/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/03/10/vue%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%90%AFgzip%E5%8E%8B%E7%BC%A9/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-vue中的$nextick函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/05/vue%E4%B8%AD%E7%9A%84$nextick%E5%87%BD%E6%95%B0/">vue中的nextick函数</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/05/vue%E4%B8%AD%E7%9A%84$nextick%E5%87%BD%E6%95%B0/" class="archive-article-date">
+  	<time datetime="2020-03-05T11:32:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="今天来说说vue实例中的nextTick函数"><a href="#今天来说说vue实例中的nextTick函数" class="headerlink" title="今天来说说vue实例中的nextTick函数"></a>今天来说说vue实例中的nextTick函数</h3><p>简单的来说，Vue更新DOM是要等数据全部变化完成后异步来更新的。所以要获取DOM元素需要写在 <code>this.$nextick()</code> 回调函数里。<br><strong>eg:</strong><br><code>Element-UI</code> 中的 <code>el-tag</code> 动态编辑标签</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-input</span> <span class="attr">class</span>=<span class="string">"input-new-tag"</span> <span class="attr">v-if</span>=<span class="string">"inputVisible"</span> <span class="attr">v-model</span>=<span class="string">"inputValue"</span> <span class="attr">ref</span>=<span class="string">"saveTagInput"</span> </span></span><br><span class="line"><span class="tag">          @<span class="attr">keyup.enter.native</span>=<span class="string">"handleInputConfirm"</span> @<span class="attr">blur</span>=<span class="string">"handleInputConfirm"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-input</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">el-button</span> <span class="attr">v-else</span> <span class="attr">class</span>=<span class="string">"button-new-tag"</span> <span class="attr">size</span>=<span class="string">"small"</span> @<span class="attr">click</span>=<span class="string">"showInput"</span>&gt;</span>+ New Tag<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">showInput() &#123;</span><br><span class="line">  <span class="keyword">this</span>.inputVisible = <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">this</span>.$nextTick( <span class="function"><span class="params">_</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 点击标签切换为文本框并自动获取焦点</span></span><br><span class="line">    <span class="keyword">this</span>.$refs.saveTagInput.$refs.input.focus();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>简而言之，如果你在数据改变之后的操作跟改变之后的DOM有关，那么就应该使用 <code>Vue.nextTick()</code> </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/05/vue%E4%B8%AD%E7%9A%84$nextick%E5%87%BD%E6%95%B0/">展开全文 >></a>
         </p>
       
 
@@ -507,7 +764,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 John Doe
+    		&copy; 2020 昭
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -528,7 +785,7 @@
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -551,25 +808,17 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -588,6 +837,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">javaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -632,38 +893,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
     
 
     
